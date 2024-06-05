@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}body, html{
+    overflow-x: hidden;
+} 
+
+    
+
+.popular h1{
+    font-weight: bold;
+    cursor: default;
+    font-size: 6vmin;
+    font-family: 'Times New Roman', Times, serif
+}
+.line{
+    width: 150px;
+    height: 4px;
+    background: rgb(242, 75, 75);
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+
+/*MAO NI ANG CSS SA HEADER*/
+
+header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(bg3.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;  /* Keeps the background image fixed while scrolling */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+
+
+
+
+/*MAO NI ANG CSS SA NAV BAR*/
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+    font-family: 'Times New Roman', Times, serif;
+    backdrop-filter: blur(20px);
+   
+}.navbar a{
+        text-decoration: none;
+        color: aliceblue;
+        font-weight: bold;
+}ul{
+    list-style: none;
+}.nav-links{
+    display: flex;
+    align-items: center;
+
+}.nav-links li{
+    margin: 0 30px;
+
+}.active{
+    color: rgb(238, 35, 35);
+    text-decoration: underline;
+    font-weight: bold;
+}.category .active1 a{
+    color: red;
+    font-weight: bold;
+}.navbar h1{
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}.nav-links .ctn {
+    transition: 0.4s;
+    cursor: pointer;
+}.navbar .ctn:hover{
+    background-color: rgb(0, 209, 209);
+    color: black;  
+}
+.menu-btn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}.ctn {
+    padding: 8px 35px;
+    background: rgb(234, 57, 57);
+    border-radius: 30px;
+    color: whitesmoke;   
+    transition: 0.4s ease-in-out;
+}
+
+
+
+
+
+
+/*Mobile devices MAO NI SIYA ANG CODE PARA MA RESPONSIVE SIYA NGA TARONG*/
+@media only screen and (max-width:850px){
+
+    .menu-btn{
+        display: block;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position:absolute; 
+        top: 30px;
+        left: 30px;
+    }
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: rgb(68, 40, 40);
+        margin-top: -900px;
+        transition: all 0.2s ease;
+    }
+    .mobile-menu{
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
+        border-bottom-left-radius: 30%;
+     
+    }
+    .nav-links li{
+        margin-top: 30px;
+
+    }.row .col-sm-3{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        
+    }.row .card{
+        width: 100%;
+        
+    }.row .card h2{
+        font-size: 2vmin;
+        margin: 20px auto;
+     } .category li{
+        font-size: 2.2vmin;
+      
+    }.category{
+        margin-bottom: 50px;
+    }.footer .row .col-sm-6 {
+        margin-left: 50px;
+      }
+}
+
+
+
+
+
+
+
+section{
+    width: 80%;
+    margin: 80px auto;
+    
+    
+    
+}.card{
+    
+    box-shadow: 1px 1px 20px rgb(224, 111, 111);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+
+}.card:hover{
+    width: 105%;
+
+
+}.card h4{
+   margin-bottom: 20px;
+  
+   font-weight: bold;
+}
+.title{
+    text-align: center;
+    font-size: 5vmin;
+}.title1{
+    text-align: center;
+    font-size: 5vmin;
+    margin-top: 50px;
+}.popular .line{
+    margin-bottom: 5%;
+}.row{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    
+}.row .col-sm-3 {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+}
+.row .col-sm-3 img {
+    width: 100%;
+    
+ }
+ .popular .row{
+    margin-top: 50px;
+ 
+ }.popular a{
+    text-decoration: none;
+    font-weight: bold;
+    
+ }.popular .category a:hover{
+   color: rgb(193, 0, 0);
+  
+ }.ctn:hover{
+    color: black;
+    background-color: rgb(243, 140, 140);
+ }
+ .popular h2{
+    color: red;
+    font-weight: bold;
+    font-size: 4vmin;
+    margin: 20px auto;
+ }
+ .popular .ctn{
+    margin-bottom: 10px;
+
+ }.category ul {
+    list-style: square;
+ } 
+ .category{
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 3vmin;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    background-image: url(bg4.png);
+  
+
+}.category li{
+    margin: 0 30px;
+    transition: 0.3 ease-in-out;
+   
+}.category a:hover{
+    color: rgb(152, 9, 9);
+   
+}.category a{
+    text-decoration: none;
+    color: rgb(241, 241, 241);
+    font-weight: bold;
+}.footer{
+    width: 100%;
+    min-height: 100px;
+    padding: 5px 80px;
+    margin: 0;
+    background: rgb(52, 42, 42);
+    text-align: center;
+   
+ }.footer p{
+    color: whitesmoke;
+    margin: -10px auto;
+    padding: 20px auto;
+    display: flex;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+ }.footer h1{
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 10vmin;
+    display: flex;
+    margin-top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+ }.footer .col-sm-2{
+    padding-top: 50px;
+    text-align: center;
+    
+ }.footer .col-sm-2 p{
+   cursor: pointer;
+   width: auto;
+   transition: .4s;
+    
+ }.footer .col-sm-2 p:hover{
+    color: red;
+ }
+
+ .icons ion-icon{
+    color: #ededed;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: 7%;
+    margin-bottom: 20px;
+}
+.icons ion-icon:hover{
+    color: rgb(240, 32, 32);
+}.card h2{
+    font-size: 3vmin;
+ }
+
+
+ 

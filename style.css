@@ -1,0 +1,269 @@
+body, html{
+overflow-x: hidden; /* Para mawala ang scroll2 sa baba*/
+}
+
+/*MAO NI ANG CSS SA HEADER*/
+header {
+    width: 100vw; 
+    height: 100vh;
+    background-image: url(pic112.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;  /* Keeps the background image fixed while scrolling */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center /*Para ma center ang mga content*/ 
+}.header-content{
+    margin-bottom: 150px;       
+    color: whitesmoke;  /*color sa mga text sa content*/
+    text-align: center;   /*Para ma center ang text og ang button nga naa sa header*/
+}.header-content h2{   /*GINA TAWAG ANG h2 nga tag nga naa sa divion nga header-content*/
+    font-size: 4vmin;   /*we use vmin para responsive ang text size  ni siya sa h2 nga tag*/
+    font-family: 'Times New Roman', Times, serif; 
+}.line{ /*Gitawag ang division nga class niya kay line*/ 
+    width: 150px; /*ka lapdon sa line*/
+    height: 4px; /*ka tason sa line*/
+    background: rgb(242, 75, 75); /*color sa line*/
+    margin: auto; 
+    border-radius: 5px; /*kani tong purpose nganong na curve siya */
+}.header-content h1{ /*GINA TAWAG ANG h1 nga tag nga naa sa divion nga header-content*/
+    font-size: 10vmin;   /*we use vmin para responsive ang text size  ni siya sa h1 nga tag*/
+    margin-top: 50px;  /*MAO NI SIYA PARA NAA SIYAY GAP SA LINYA*/
+    margin-bottom: 30px; /*MAO NI SIYA PARA NAY GAP SAD SA BABA*/
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold; 
+    
+}.ctn{  /*mao ni ang CLASS SA MGA BUTTON*/
+    padding: 8px 35px; /*ang una nga px is PADDING na siya sa TOP OG BOTTOM then ang ikaduha nga px is PADDING SA LEFT AND RIGHT*/
+    background: rgb(234, 57, 57); /*BACKGROUND COLOR SA BUTTON*/
+    border-radius: 30px; /*kani tong purpose nganong na curve siya */
+    color: whitesmoke;  /*COLOR SA TEXT*/
+    
+}.header-content a{ /*GINA TAWAG ANG a nga tag nga naa sa divion nga header-content*/
+    text-decoration: none; /*SO GI GAMIT NATO NI KAY NAKA href man ang Tag nato so gamiton ni para mawala ang linya nga baba sa text*/
+    font-weight: bold;
+    transition: .4s; /*GAMITON NI SIYA PARA MO GANA ANG HOVER */
+}.header-content a:hover{  /* GI TAWAG GIHAPON ANG a NGA TAG PERO NAA NA SIYAY HOVER (hover mao ni mahitabo og mag enter ang mouse sa naka HOVER)*/
+   color: rgb(245, 22, 22);
+   background-color: aliceblue;
+}
+
+
+
+
+
+/*MAO NI ANG CSS SA NAV BAR*/
+
+.navbar{ /* NAVBAR KANI TONG PINAKA TAAS NA MAKITA NINYO*/
+    position: absolute; /*absolute para mahimo siyay relative */
+    width: 100%; /*KADAKON SA NAV BAR*/
+    padding: 20px; /*PADDING TANAN NANI SIYA*/
+    color: whitesmoke; /*COLOR SA TEXT SA NAV BAR*/
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    backdrop-filter: blur(20px);
+}.navbar a{ /*GINA TARGET ANG a NGA TAG NA NAA SA NAVBAR*/
+    text-decoration: none; /*SO GI GAMIT NATO NI KAY NAKA href man ang Tag nato so gamiton ni para mawala ang linya nga baba sa text*/
+    color: aliceblue; /* color text */
+    font-weight: bold; 
+}ul{ /*GI TARGET ANG UL (UNORDERED LIST)*/
+    list-style: none; /*SO GI GAMIT NATO NI KAY NAKA li man ang Tag nato so gamiton ni para mawala ang dot dot nga naa sa kilid sa text*/
+}.nav-links{ /*GI TARGET ANG NAA SA SULOD SA NAV-LINKS*/
+    display: flex; /*gi gamit ni siya para ma arrange siya (MAO NI ANG REASON NGANONG NAKA ARRANGE ANG NAVBAR )*/
+    align-items: center; /*para ma */
+
+}.nav-links li{
+    margin: 0 30px; /*MARGIN SA MGA li nga TAG PARA NAA SILAY GAP BETWEEN first px is para sa top og bottom ang second is para sa left and right nga margin*/
+
+}.active{ /*gina target  ANI NIYA ANG DIVISION NGA NAKA NAME OG CLASS NGA active */
+    
+    color: rgb(238, 35, 35); /*color ni niya*/
+    text-decoration: underline; /*gi butngan nato og decoration sa text nga underline */
+}.navbar .logo{ /*gina target ani niya is ang mga h1 nga tag nga naa sa navbar nga division (mao ni siya inyung makita sa navbar nga TEXT LOGO)*/
+    font-weight: bold; 
+    font-family: 'Times New Roman', Times, serif;
+}.nav-links .ctn { /* gi tawag niya ang ctn (BUTTON) nga naa sa navlinks*/
+    transition: 0.4s; /*gi butngan niya transition para mo effect ang hover*/
+    cursor: pointer; /* mao ni ang mahitabo pag ang cursor is mag point siya sa object sa atong gi tawag*/
+}.navbar .ctn:hover{ /* gina target niya ang ctn (BUTTON) nga naa sa navbar gibutngan niya og HOVER*/
+    background-color: rgb(0, 209, 209); /*mag change og background color if mag enter ang mouse*/   
+}
+.menu-btn{ /*MAO NI ANG HAMBURGER MENU DILI NINYO NI MAKITAN UNLESS OG WALA PA NINYO GI PAGAMAY ANG WEBSITE*/
+    position: absolute; /*absolute para mahimo siyay relative */
+    top: 30px; /*margin top niya*/
+    right: 30px; /*margin right niya*/
+    width: 40px; /*Kadakon nya*/
+    cursor: pointer;  /* mao ni ang mahitabo pag ang cursor is mag point siya sa object sa atong gi tawag*/
+    display: none; /*DISPLAY NONE PARA MAWALA SIYA (MAWALA SIYA PAG DAKO ANG WEBSITE)*/
+}
+
+
+
+
+
+/*Mobile devices MAO NI SIYA ANG CODE PARA MA RESPONSIVE SIYA NGA TARONG*/
+/*BASAHON NI NIYA NGA CODE IF GAMAY ANG WEBSITE OR AROUND 850PX SIYA*/
+@media only screen and (max-width:850px){
+
+    .menu-btn{ /*GI TARGET NIYA ANG MENU BTN NGA DIVISION WHICH IS ANG HAMBERGER MENU*/
+        display: block; /*DISPLAY BBLOCK (PASABOT ANA KAY MO GAWAS SIYA)*/
+    }
+    .navbar{ /*GI TARGET NIYA ANG NAVBAR NGA DIVISION*/
+        padding: 0; /*IYANG PADDING*/
+    }
+    .logo{  /*GI TARGET NIYA ANG LOGO NGA DIVISION MAO NI ANG TEXT LOGO MAKITA NINYO SA NAVBAR*/
+        position:absolute; /*absolute para mahimo siyay relative */
+        top: 30px; /*margin top niya*/
+        left: 30px; /*Kadakon nya*/
+    }
+    .nav-links{ /*GI TARGET NIYA ANG navlinks NGA DIVISION*/
+        flex-direction: column; /*SO GINA GAMIT NI SIYA PAG NAKA FLEX ANG DISPLAY SO FROM THE WORD COLUMN NAKA COLUMN IYANG ARRANGEMENT*/
+        width: 100%; /* KADKON NIYA */
+        height: 100vh; /*IYANG KATASON*/
+        justify-content: center; /*gi pa center nato siya*/
+        background: rgb(68, 40, 40); /* BACKGROUND NI SA NAVLINKS*/
+        margin-top: -900px; /*mao ni ang css para ma tago ang navlinks so mahimo siyang burger menu*/
+        transition: all 0.2s ease; /*para mo gana ang HOVER */
+    }
+    .mobile{ /*nag buhat kog code diri wala siya gina target MAGAMIT NI SIYA SA JS OR JAVA SCRIPT*/
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
+        border-bottom-left-radius: 30%;
+     
+    }
+    .nav-links li{ /*GINA TARGET NIYA ANG li nga naa sa division nga class name NAVLINKS*/
+        margin-top: 30px; /*margin top*/
+
+    }
+    .col-sm-6 { /*gina target niya ang division nga col sm 6*/
+        margin-bottom: 20px; /*margin bottom*/
+    }.footer .row .col-sm-6 { /*gina target niya ang division nga col sm 6 nga naa sa footer nga division*/
+       margin-left: 25px;
+     }
+}
+
+
+
+
+
+/*MAO NI ANG CSS SA SA POPULAR*/
+section{ /*GINA TAWAG NI ANG tanan SECTION NGA tag*/
+    width: 80%; /*iyang kadakon*/
+    margin: 80px auto;  /*FIRST NGA MARGIN IS SA TOP AND BOTTOM ANG IKA DUHA NGA MARGIN IS SA LEFT AND RIGHT*/
+}
+.popular .title h1{ /*gi tawag niya ang h1 nga naa sa class nga popular og title*/
+    text-align: center; /*para mabutang siya sa center*/
+    font-size: 7vmin; /* font size niya */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}.popular .line{ /*gi target ang popular og line nga class*/
+    margin-bottom: 5%; /*margin bottom para naa siyay space sa baba*/
+}.row{ /*gi tawag ang class nga row*/
+    width: 100%; /*kadokon sa row*/
+}.row .col-sm-6 { /*gina target ang class nga col sm 6 nga naa sa row*/
+   display: flex; /*gi gamit ni siya para ma arrange siya*/
+   flex-direction: column;  /*SO GINA GAMIT NI SIYA PAG NAKA FLEX ANG DISPLAY SO FROM THE WORD COLUMN NAKA COLUMN IYANG ARRANGEMENT (gitarget ani niya is ang mga content sulod sa col sm 6)*/
+   align-items: center;   /*para ma center*/
+}
+.row .col-sm-6 img { /*gina target niya ang image nga naa sa class nga naa sa col sm 6 nga naa sad sa class nga row*/
+    width: 80%; /*ka dakon sa image*/
+ }
+ .popular .row{ /*gina target niya ang class nga row nga naa sa class nga popular*/
+    margin-top: 50px; /*margin niya sa top para naa siyay GAP*/
+ }
+ .popular h2{ /*GINA TARGET NIYA ANG h2 nga element nga naa sa division nga naa sa class name nga popular*/
+    color: red; /* color sa text*/
+    font-weight: bold; 
+    font-size: 4vmin;
+    margin: 20px auto; /*margin niya so first px is sa bottom og top then sa kaduha nga px is sa left and right*/
+ }
+ .popular .ctn{ /*gina target niya is ang division nga class name is ctn (button) nga naa sa popular nga class*/
+    margin-top: 20px; /*margin top niya para naa siyay gap sa taas*/
+ }
+
+
+
+
+
+
+ /*MAO NI ANG CSS SA EXPLORE*/
+
+ .explore{ /*gina target niya ang division nga class name is explore*/
+    width: 100%; /*kadakon explore nga division*/
+    height: 100vh; /*height or ka taason sa explore nga division*/
+    background-image: url(bg4.png); /*background sa explore nga diviison */
+    background-position: center; /*position sa background*/
+    background-size: cover; /*size sa background*/
+    display: flex;  /*gi gamit ni siya para ma arrange siya*/
+    align-items: center; /*para ma center*/
+ }
+ .explore-content{ /*gi target niya ang diviision nga ang class name is division content*/
+    padding: 50px; /*padding niya*/
+ }.explore-content h1{ 
+    color: rgb(233, 224, 224);
+    font-weight: bold;
+    font-size: 6vmin;
+    margin: 10px;
+ }.explore-content p{
+    color: antiquewhite;
+   margin-top: 40px;
+    margin-left: 10px;
+
+
+
+
+    /*MAO NI ANG CSS SA FOOTER PINAKA BABA*/
+ }.footer{
+    width: 100%;
+    margin: 0;
+    background: rgb(52, 42, 42);
+    text-align: center;
+    margin-top: -80px;
+    
+ }.footer p{
+    color: whitesmoke;
+    margin: -10px auto;
+    padding: 20px auto;
+    display: flex;
+    font-weight: bold;
+    font-family:'Times New Roman', Times, serif;
+ }.footer h1{
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 10vmin;
+    display: flex;
+    margin-top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    
+ }.footer .col-sm-2{
+    padding-top: 50px;
+    text-align: center;
+    
+ }.footer .col-sm-2 p{
+   cursor: pointer;
+   width: auto;
+   transition: .4s;
+    
+ }.footer .col-sm-2 p:hover{
+    color: red;
+    
+ }.footer .col-sm-6{
+    margin-left: -190px;
+    
+ }
+
+ .icons ion-icon{
+    color: #ededed;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+    justify-content: space-between;
+    margin-top: 5px;
+    width: 7%;
+    margin-bottom: 20px;
+}
+.icons ion-icon:hover{
+    color: rgb(240, 32, 32);
+}
